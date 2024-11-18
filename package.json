@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-security",
+  "version": "1.0.0",
+  "description": "## Table of Contents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genGit963/nodejs-security.git"
+  },
+  "author": "Er. Mahesh Bogati",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genGit963/nodejs-security/issues"
+  },
+  "homepage": "https://github.com/genGit963/nodejs-security#readme"
+}
