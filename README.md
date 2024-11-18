@@ -137,3 +137,5 @@ Implement role-based access control to limit user actions based on roles. Use mi
 - Regularly test for vulnerabilities using tools like `npm audit`.
 
 ---
+
+> check the `info.md` file for more information.
