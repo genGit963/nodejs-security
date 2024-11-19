@@ -103,3 +103,8 @@ logs/
 # Coverage directories from various test setups
 coverage/
 .nyc_output/
+
+
+# certificate
+key.pem
+cert.pem
