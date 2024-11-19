@@ -106,5 +106,6 @@ coverage/
 
 
 # certificate
+certificate/
 key.pem
 cert.pem
