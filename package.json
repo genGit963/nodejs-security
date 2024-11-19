@@ -2,7 +2,7 @@
   "name": "nodejs-security",
   "version": "1.0.0",
   "description": "## Table of Contents",
-  "main": "index.js",
+  "main": "sever.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/genGit963/nodejs-security/issues"
   },
-  "homepage": "https://github.com/genGit963/nodejs-security#readme"
+  "homepage": "https://github.com/genGit963/nodejs-security#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1"
+  }
 }
