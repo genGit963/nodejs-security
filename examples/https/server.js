@@ -1,0 +1,31 @@
+const fs = require("fs");
+const path = require("path");
+const https = require("https");
+const express = require("express");
+const bodyParser = require("body-parser");
+
+const app = express();
+const port = 3000;
+
+app.use(bodyParser.json());
+
+app.get("/", (req, res) =>
+  res.sendFile(path.resolve(__dirname, "public", "index.html"))
+);
+
+app.use("/secure", (req, res) => {
+  res.json({ key: "This is secret_key !!" });
+});
+
+https
+  .createServer(
+    // self-signed ssl certificate
+    {
+      key: fs.readFileSync("key.pem"),
+      cert: fs.readFileSync("cert.pem"),
+    },
+    app // request listener
+  )
+  .listen(port, () => console.log(`app listening on port ${port}!`));
+
+module.exports = { app };
