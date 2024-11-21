@@ -21,11 +21,13 @@ https
   .createServer(
     // self-signed ssl certificate
     {
-      key: fs.readFileSync("key.pem"),
-      cert: fs.readFileSync("cert.pem"),
+      key: fs.readFileSync("../../certificate/key.pem"),
+      cert: fs.readFileSync("../../certificate/cert.pem"),
     },
     app // request listener
   )
-  .listen(port, () => console.log(`app listening on port ${port}!`));
+  .listen(port, () =>
+    console.log(`examples/https: app listening on port ${port}!`)
+  );
 
 module.exports = { app };
