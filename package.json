@@ -18,6 +18,7 @@
   "homepage": "https://github.com/genGit963/nodejs-security#readme",
   "dependencies": {
     "body-parser": "^1.20.3",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "helmet": "^8.0.0"
   }
 }
