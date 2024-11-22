@@ -75,7 +75,7 @@ app.get("/main-page", loginCheck, (req, res) => {
   </head>
   <body>
     <h1 class="my-5 text-center text-red-600 text-4xl">You are in, ${userData?.displayName}</h1>
-    <img src=${userData?.photos[0].value} alt=${userData?.displayName} style="object-fit: cover; height: 400px; width: 400px;">
+    <img src=${userData?.photos[0].value} alt=${userData?.displayName} srcset="https://www.google.com" style="object-fit: cover; height: 400px; width: 400px;">
     <p>${userData?.emails[0].value}</p>
     <p>verified: ${userData?.emails[0].verified}</p>
   </body>
