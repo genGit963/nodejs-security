@@ -1,4 +1,5 @@
 const fs = require("fs");
+const cors = require("cors");
 const path = require("path");
 const https = require("https");
 const helmet = require("helmet");
@@ -20,15 +21,16 @@ passport.use(
       clientSecret: process.env.OATUH_CLIENT_SECRET,
     },
     function (accessToken, refreshToken, profile, done) {
-      console.log("google account detail:", accessToken, refreshToken, profile);
+      // use these accessToken and refreshToken now
+      console.log("google account detail:", profile);
       userData = profile;
       done(null, profile);
     }
   )
 );
-
 app.use(helmet());
 app.use(passport.initialize());
+app.use(cors({ allowedHeaders: "*" }));
 
 const port = process.env.PORT;
 app.use(bodyParser.json());
