@@ -57,9 +57,8 @@ app.use(bodyParser.json());
 
 // own middlewares
 const loginCheck = (req, res, next) => {
-  console.log("\n\n\nLogin Check Up !! \n");
-  console.log(req.user);
-  if (req.user) {
+  const isLoggedIn = req.user && req.isAuthenticated();
+  if (isLoggedIn) {
     next();
   } else res.redirect("/");
 };
@@ -142,9 +141,8 @@ app.use("/secret", loginCheck, (req, res) => {
 });
 
 app.use("/auth/logout", loginCheck, (req, res) => {
-  res.send(
-    "<h1 style='text-align: center; padding:4rem;'>Logged out Successfully !!</h1>"
-  );
+  req.logOut();
+  return res.redirect("/");
 });
 
 https
